@@ -10,7 +10,7 @@ Route::controller(UsuarioController::class)->group(function(){
     Route::post('/createusuarios','store');
     Route::get('/usuarios/{id}','show');
     Route::post('/usuarios/{id}', 'update');
-    Route::delete('/deleteusuario/{id}', 'destroy');
+    Route::delete('/usuarios/deleteusuario/{id}', 'destroy');
 });
 
 Route::get('/dashboard/admin', 'AdminController@index')->middleware(['auth', 'admin']);
